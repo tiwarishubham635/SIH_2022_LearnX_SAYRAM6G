@@ -1,0 +1,200 @@
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Main-Content{ 
+    background-color: #b2d4e9;
+    width: inherit;
+    position: absolute;
+    display: block;
+    left: 0.0rem;
+  }
+
+  .Above-Fold {
+    height: 93vh;
+  }
+
+  .Home-Branch-Box{
+    padding-top: 30%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-size: larger;
+    }
+
+  .Branch-Box-Heading {
+    padding: 20px;
+    display: inline-block;
+    border-style: solid;
+    width: 50vw;
+    font-size: larger;
+    position: absolute;
+    top: 40%;
+    left: 25vw;
+    text-decoration: solid;
+ }
+
+}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .Main-Content{ 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      width: inherit;
+      position: absolute;
+      display: block;
+      left: 0;
+    }
+
+    .Above-Fold {
+      height: 100vh;
+    }
+
+    .Home-Branch-Box{
+      padding-top: 30%;
+      height: 100%;
+      text-align: center;
+      color: white;
+      position: relative;
+      font-size: larger;
+      }
+
+    .Branch-Box-Heading {
+      padding: 20px;
+      display: inline-block;
+      border-style: solid;
+      width: 50vw;
+      font-size: larger;
+      position: absolute;
+      top: 40%;
+      left: 25vw;
+      text-decoration: solid;
+  }
+   
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .Main-Content{ 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      width: inherit;
+      position: absolute;
+      display: block;
+      left: 0;
+    }
+
+    .Above-Fold {
+      height: 100vh;
+    }
+
+    .Home-Branch-Box{
+      padding-top: 30%;
+      height: 100%;
+      text-align: center;
+      color: white;
+      position: relative;
+      font-size: larger;
+      }
+
+    .Branch-Box-Heading {
+      padding: 20px;
+      display: inline-block;
+      border-style: solid;
+      width: 50vw;
+      font-size: larger;
+      position: absolute;
+      top: 40%;
+      left: 25vw;
+      text-decoration: solid;
+  }
+  
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .Main-Content{ 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      width: inherit;
+      position: absolute;
+      display: block;
+      left: 0;
+    }
+
+    .Above-Fold {
+      height: 100vh;
+    }
+
+    .Home-Branch-Box{
+      padding-top: 30%;
+      height: 100%;
+      text-align: center;
+      color: white;
+      position: relative;
+      font-size: larger;
+      }
+
+    .Branch-Box-Heading {
+      padding: 20px;
+      display: inline-block;
+      border-style: solid;
+      width: 50vw;
+      font-size: larger;
+      position: absolute;
+      top: 40%;
+      left: 25vw;
+      text-decoration: solid;
+  }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .Main-Content{ 
+        z-index: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: inherit;
+        position: absolute;
+        display: block;
+        left: 0;        
+      }
+
+      .Above-Fold {
+        margin-top: 5rem;
+      }
+
+      .Home-Branch-Box{
+        padding-top: 30%;
+        height: 100%;
+        text-align: center;
+        color: white;
+        position: relative;
+        font-size: larger;
+        }
+
+      .Branch-Box-Heading {
+        padding: 20px;
+        display: inline-block;
+        border-style: solid;
+        width: 50vw;
+        font-size: larger;
+        position: absolute;
+        top: 40%;
+        left: 25vw;
+        text-decoration: solid;
+    }
+
+  }
+  
+  
+  
+  
+  

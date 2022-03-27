@@ -1,0 +1,31 @@
+import api from '../api'
+export const threadCreated = (thread) =>({
+    type: 'THREAD_CREATED',
+    thread
+})
+
+export const threadUpdated = (thread) =>({
+    type: 'THREAD_UPDATED',
+    thread
+})
+
+export const threadDeleted = () =>({
+    type:'THREAD_DELETED',
+})
+
+export const createThread = (details) => dispatch =>
+    api.thread.createThread(details).then(newThread => {
+        console.log("New thread is as follows: ", newThread)
+        dispatch(threadCreated(newThread))
+    }
+    );
+
+export const editThread = (details) => dispatch =>
+    api.thread.editThread(details).then(newThread => {
+        console.log("New thread is as follows: ", newThread)
+        return(dispatch(threadUpdated(newThread)))
+    }
+    );
+
+export const deleteThread = (threadId) => dispatch =>
+    api.thread.deleteThread(threadId).then( () => dispatch(threadDeleted()));

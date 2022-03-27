@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (max-width: 600px) {
+
+  .Society-Heading {
+    background-color: #053c5e;
+    width: 30vw;
+    margin-right: -30vw;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .Society-Heading > div {
+    width: 80%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    margin: 40vh 0vw 0vw 40px;
+    font-size: 7vh;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    text-align: center;
+  }
+
+  .img{
+    margin: 9%;
+  }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .Society-Heading {
+    display: flex;
+    flex-direction: column;
+    background-color: #053c5e;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 30%;
+    color: white;
+    position: fixed;
+    left: 0;
+  }
+
+  .Society-Heading h2 {
+    width: 100%;
+    padding: auto;
+    text-align: center;
+  }
+
+  .Society-Heading hr {
+    width: 70%;
+    display: block;
+  }
+  
+  .img{
+    margin: 9%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .Society-Heading {
+    display: flex;
+    flex-direction: column;
+    background-color: #053c5e;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 30%;
+    color: white;
+    position: fixed;
+    left: 0;
+  }
+
+  .Society-Heading h2 {
+    width: 100%;
+    padding: auto;
+    text-align: center;
+  }
+
+  .Society-Heading hr {
+    width: 70%;
+    display: block;
+  }
+  
+  .img{
+    margin: 9%;
+  }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .Society-Heading {
+    display: flex;
+    flex-direction: column;
+    background-color: #053c5e;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 30%;
+    color: white;
+    position: fixed;
+    left: 0;
+  }
+
+  .Society-Heading h2 {
+    width: 100%;
+    padding: auto;
+    text-align: center;
+  }
+
+  .Society-Heading hr {
+    width: 70%;
+    display: block;
+  }
+  
+  .img{
+    margin: 9%;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .Society-Heading {
+    display: flex;
+    flex-direction: column;
+    background-color: #053c5e;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 30%;
+    color: white;
+    position: fixed;
+    left: 0;
+  }
+
+  .Society-Heading h2 {
+    width: 100%;
+    padding: auto;
+    text-align: center;
+  }
+
+  .Society-Heading hr {
+    width: 70%;
+    display: block;
+  }
+
+  .img{
+    margin: 9%;
+  }
+}

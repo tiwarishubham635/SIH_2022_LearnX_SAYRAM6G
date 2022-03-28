@@ -4,7 +4,7 @@ const User = require('../models/user')
 router.post('/', (req,res)=>{
     const {credentials} = req.body;
     User.findOne({username:credentials.username}).then(user =>{
-        console.log("Found User: ", user);
+        // console.log("Found User: ", user);
         if(user && user.isValidPassword(credentials.password)){
             res.status(200).json({user:user.toAuthJSON()});
         }

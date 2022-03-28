@@ -5,26 +5,30 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux';
 import {logout} from '../../actions/auth'
 
-const NavBar = ({username,logout}) => (
+const NavBar = ({user,logout}) => {
+    console.log("Hello from Navigation: ", user);
+    return (
     <Menu secondary pointing >
         <Menu.Item as={Link} to='/forum' style={{color:"white", fontSize: "20px"}}>Home</Menu.Item>
-        <Menu.Item as={Link} to={`/users/${username}`} style={{color:"white", fontSize: "20px"}}>{username}</Menu.Item>
+        <Menu.Item as={Link} to={`/users/${user.username}`} style={{color:"white", fontSize: "20px"}}>{user.username}</Menu.Item>
         <Menu.Menu position='right'>
-            <Menu.Item as={Link} to='/newthread' style={{color:"white", fontSize: "20px"}}>New</Menu.Item>
+            <Menu.Item as={Link} to='/newthread' style={{color:"white", fontSize: "20px"}}>New Thread</Menu.Item>
+            {user.role === "ADMIN" && <Menu.Item as={Link} to='/newthread' style={{color:"white", fontSize: "20px"}}>Schedule a Meet</Menu.Item>}
             <Menu.Item onClick={() => logout()} style={{color:"white", fontSize: "20px"}}>Logout</Menu.Item>
         </Menu.Menu>
     </Menu>
-);
+    );
+};
 
 
 NavBar.propTypes = {
-    username:PropTypes.string.isRequired,
-    logout:PropTypes.func.isRequired
+    logout:PropTypes.func.isRequired,
+    user: PropTypes.object.isRequired
 
 };
 function mapStateToProps(state){
     return{
-        username:state.user.username
+        user: state.user
     }
 }
 

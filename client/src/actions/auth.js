@@ -1,7 +1,7 @@
 import api from '../api'
 export const userLoggedIn = (user) => ({
     type: 'USER_LOGGED_IN',
-    user
+    payload: user
 })
 export const userLoggedOut = () => ({
     type: 'USER_LOGGED_OUT',

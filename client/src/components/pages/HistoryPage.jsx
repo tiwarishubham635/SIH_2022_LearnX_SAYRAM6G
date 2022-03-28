@@ -54,7 +54,8 @@ class HistoryPage extends Component{
        })
         let panes = [
             {menuItem: 'Threads', render:() => <Tab.Pane attached={false}><List>{threadsTab}</List></Tab.Pane>},
-            {menuItem: 'Comments', render:() => <Tab.Pane attached={false}><Comment.Group>{commentTab}</Comment.Group></Tab.Pane>}
+            {menuItem: 'Comments', render:() => <Tab.Pane attached={false}><Comment.Group>{commentTab}</Comment.Group></Tab.Pane>},
+            {menuItem: 'Communities', render:() => <Tab.Pane attached={false}></Tab.Pane>}
         ]
         return(
             <div>

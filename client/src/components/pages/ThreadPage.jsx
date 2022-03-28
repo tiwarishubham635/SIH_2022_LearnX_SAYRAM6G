@@ -27,8 +27,8 @@ const sortOptions =[
         value:'Date',
     },
     {
-        text:'Points',
-        value:'Points'
+        text:'Likes',
+        value:'Likes'
     }
 
 ]
@@ -43,7 +43,7 @@ class ThreadPage extends Component{
             loading:true,
             commentBox:false,
             comments:[],
-            sortby:'Points',
+            sortby:'Likes',
             ascending:false
         }
         this.submit = this.submit.bind(this);
@@ -95,7 +95,7 @@ class ThreadPage extends Component{
     render(){
         let temp = this.state.comments.slice()
 
-        if(this.state.sortby === 'Points'){
+        if(this.state.sortby === 'Likes'){
             temp.sort(compareKarma)
         }
         if(this.state.sortby === 'Date'){
@@ -112,20 +112,31 @@ class ThreadPage extends Component{
         })
         return(
             <div>
-                <NavBar />
-                <Segment loading={this.state.loading} style ={{background: "#ED4832"}}>
-                    <ThreadDisplay threadid={this.props.match.params.id}/>
-                </Segment>
-                <Button active={this.state.commentBox} onClick={this.toggleComment}>Comment on this thread</Button>
-                <CommentForm visible={this.state.commentBox} submit={this.submit} body=''/>
-                <Segment loading={this.state.loading}>
-                    <Dropdown defaultValue='Points' selection options={sortOptions} onChange={this.sortChange}/>
-                    <Dropdown defaultValue={false} selection options={orderOptionss} onChange={this.orderChange}/>
-                    <Comment.Group>
-                        <Header as='h3' dividing>Comments</Header>
-                        {commentList}
-                    </Comment.Group>
-                </Segment>
+                <div style={{"marginTop":"1rem"}}>
+                    <span className='firstname'>
+                        Learn
+                    </span>
+                    <span className='secondname'>
+                        X
+                    </span>
+                </div>
+                
+                <div style={{"padding":"0rem 10rem 0rem 10rem"}}>
+                    <NavBar />
+                    <Segment loading={this.state.loading} style ={{background: "#8a2be2"}}>
+                        <ThreadDisplay threadid={this.props.match.params.id}/>
+                    </Segment>
+                    <Button active={this.state.commentBox} onClick={this.toggleComment}>Comment on this thread</Button>
+                    <CommentForm visible={this.state.commentBox} submit={this.submit} body=''/>
+                    <Segment loading={this.state.loading}>
+                        <Dropdown defaultValue='Likes' selection options={sortOptions} onChange={this.sortChange}/>
+                        <Dropdown defaultValue={false} selection options={orderOptionss} onChange={this.orderChange}/>
+                        <Comment.Group>
+                            <Header as='h3' dividing>Comments</Header>
+                            {commentList}
+                        </Comment.Group>
+                    </Segment>
+                </div>
 
             </div>
         )

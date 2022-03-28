@@ -19,11 +19,21 @@ class NewThreadPage extends Component{
     render(){
         return(
             <div>
-                <NavBar />
-                <Segment style = {{background: "#ED4832"}}>
-                    <h2>Create a new thread</h2>
-                    <NewThreadForm submit={this.submit}/>
-                </Segment>
+                <div style={{"marginTop":"1rem"}}>
+                    <span className='firstname'>
+                        Learn
+                    </span>
+                    <span className='secondname'>
+                        X
+                    </span>
+                </div>
+                <div style={{"padding":"0rem 10rem 0rem 10rem"}}>
+                    <NavBar />
+                    <Segment style = {{background: "#8a2be2"}}>
+                        <h2>Create a new thread</h2>
+                        <NewThreadForm submit={this.submit}/>
+                    </Segment>
+                </div>
             </div>
         )
 

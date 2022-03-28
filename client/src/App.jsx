@@ -15,9 +15,19 @@ import ChoicePage from "./components/pages/ChoicePage.jsx";
 
 const ForumAndNavbar = () => {
         return(
-            <div style={{"backgroundColor":""}}>
-                <NavBar/>
-                <FrontPage />
+            <div>
+                <div style={{"marginTop":"1rem"}}>
+                    <span className='firstname'>
+                        Learn
+                    </span>
+                    <span className='secondname'>
+                        X
+                    </span>
+                </div>
+                <div style={{"padding":"0rem 10rem 0rem 10rem"}}>
+                    <NavBar/>
+                    <FrontPage/>
+                </div>
             </div>
         );
 }
@@ -39,7 +49,7 @@ const ForumAndNavbar = () => {
 // }
 
 const App =({location,isAuthenticated}) => (
-        <div className="normal-page" style={{"backgroundColor":""}}>
+        <div className="normal-page">
                 <GuestRoute location={location} path="/" exact component={LoginPage}/>
                 <GuestRoute location={location} path="/login" exact component={LoginPage}/>
                 <UserRoute location={location} path="/forum" component={ForumAndNavbar}/>
@@ -48,7 +58,6 @@ const App =({location,isAuthenticated}) => (
                 <UserRoute location={location} path="/thread/:id" exact component={ThreadPage} />
                 <UserRoute location={location} path="/users/:username" exact component={HistoryPage} />
                 <UserRoute location={location} path="/choices" exact component={ChoicePage} />
-            
         </div> 
 );
 

@@ -21,12 +21,12 @@ class LoginPage extends Component{
     }
     render(){
         return(
-            <div className = "Login-Page-Body" style={{"backgroundColor":""}}>
+            <div className = "Login-Page-Body" style={{"backgroundColor":"red"}}>
                 <Header/>
                 <div className = "Login-Page-Head">
-                <h1 className = "Login-title">Login Page</h1>
-                <LoginForm submit={this.submit}/><br/>
-                <div className = "To-signup">Don't have an account? <Link to="/signup">Sign up here</Link></div>
+                    <h1 className = "Login-title">Login</h1>
+                    <LoginForm submit={this.submit}/><br/>
+                    <div className = "To-signup">Don't have an account? <Link to="/signup" style={{"color":"silver"}}>Sign up here</Link></div>
                 </div>
             </div>
         )

@@ -16,16 +16,16 @@ class SignupPage extends Component{
 
     submit = (data) =>{
         return this.props.signup(data)
-            .then(() => this.props.history.push("/forum"));
+            .then(() => this.props.history.push("/choices"));
     }
     render(){
         return(
             <div style = {{width: "100vw", marginLeft: "-28vw"}}>
                 <Header/>
-                <div style = {{paddingTop: "14vw"}}>
-                <h1 style = {{marginLeft: "60vw"}}>Signup Page</h1>
-                <SignupForm submit={this.submit}/><br/>
-                <div style = {{marginLeft: "58vw"}}>Already have an account? <Link to="/login">Login here</Link></div>
+                <div style = {{"paddingTop": "14vw", "margin-left": "13vw", "height":"100vh", "width":"200vw", "background":"linear-gradient(135deg, #331343 20%, red 80%)"}}>
+                    <h1 style = {{"marginLeft": "62vw"}}>Signup</h1>
+                    <SignupForm submit={this.submit}/><br/>
+                    <div style = {{"marginLeft": "56vw"}}>Already have an account? <Link to="/login" style={{"color":"silver"}}>Login here</Link></div>
                 </div>
             </div>
         )

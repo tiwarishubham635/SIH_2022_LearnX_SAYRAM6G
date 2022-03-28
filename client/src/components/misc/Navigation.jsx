@@ -71,10 +71,10 @@ const NavBar = ({user,logout}) => {
     //console.log("Hello from Navigation: ", user);
     return (
     <Menu secondary pointing >
-        <Menu.Item as={Link} to='/forum' style={{color:"white", fontSize: "20px"}}>Home</Menu.Item>
+        <Menu.Item as={Link} to='/forum' style={{color:"white", fontSize: "20px"}}>Community</Menu.Item>
         <Menu.Item as={Link} to={`/users/${user.username}`} style={{color:"white", fontSize: "20px"}}>{user.username}</Menu.Item>
         <Menu.Menu position='right'>
-            <Menu.Item as={Link} to='/newthread' style={{color:"white", fontSize: "20px"}}>New Thread</Menu.Item>
+            <Menu.Item as={Link} to='/newthread' style={{color:"white", fontSize: "20px"}}>Create a Post</Menu.Item>
             {user.role === "ADMIN" && <Menu.Item onClick={() => handleClick()} style={{color:"white", fontSize: "20px"}}>Schedule a Meet</Menu.Item>}
             <Menu.Item onClick={() => logout()} style={{color:"white", fontSize: "20px"}}>Logout</Menu.Item>
         </Menu.Menu>

@@ -66,6 +66,7 @@ class SignupForm extends Component{
                         type="username"
                         id="username"
                         name="username"
+                        placeholder="username"
                         value={this.state.data.username}
                         onChange={this.onChange}
                     />
@@ -78,11 +79,12 @@ class SignupForm extends Component{
                         type="password"
                         id="password"
                         name="password"
+                        placeholder="password"
                         value={this.state.data.password}
                         onChange={this.onChange}
                     />
                     {this.state.errors.password && <InlineError text={this.state.errors.password}/>}
-                </Form.Field>
+                </Form.Field><br/>
                 <Button onClick={() => this.submit } primary style = {{marginLeft: "7vw"}}>Signup</Button>
             </Form>
         );

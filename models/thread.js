@@ -28,7 +28,6 @@ const ThreadSchema = new mongoose.Schema({
     },
     community: {
         type: String,
-        required: true   
     }
 },
     {timestamps:{createdAt:'created'}}

@@ -59,12 +59,24 @@ class HistoryPage extends Component{
         ]
         return(
             <div>
-                <NavBar />
-                <Segment loading={this.state.loading} style = {{background: "#ED4832"}}>
-                    <h3>{`${this.props.match.params.username}'s history`}</h3>
-                    <Tab menu={{secondary:true,pointing:true}} panes={panes}/>
-                </Segment>
+                <div style={{"marginTop":"1rem"}}>
+                    <span className='firstname'>
+                        Learn
+                    </span>
+                    <span className='secondname'>
+                        X
+                    </span>
+                </div>
+
+                <div style={{"padding":"0rem 10rem 0rem 10rem"}}>
+                    <NavBar />
+                    <Segment loading={this.state.loading} style = {{background: "#8a2be2"}}>
+                        <h3>{`${this.props.match.params.username}'s history`}</h3>
+                        <Tab menu={{secondary:true,pointing:true}} panes={panes}/>
+                    </Segment>
+                </div>
             </div>
+           
 
         )
     }

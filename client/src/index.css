@@ -1,5 +1,5 @@
 body {
-  background: url(Background.png);
+  background: #331343;
   background-repeat: repeat-y;
   background-size: 100%;
   background-attachment: fixed;
@@ -40,7 +40,7 @@ body {
 }
  */
 
-.normal-pages {
+.normal-page {
   width: 100vw;
   height: 100vh;
 }

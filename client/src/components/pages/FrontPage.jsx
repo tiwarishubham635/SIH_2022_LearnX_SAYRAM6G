@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom'
-import {Segment,Card,Dropdown} from 'semantic-ui-react';
+import {Segment,Card,Dropdown, Message} from 'semantic-ui-react';
 import Moment from 'react-moment'
 import axios from 'axios';
 
@@ -26,8 +26,8 @@ const sortOptions =[
         value:'Title'
     },
     {
-        text:'Points',
-        value:'Points'
+        text:'Likes',
+        value:'Likes'
     }
 
 ]
@@ -47,7 +47,7 @@ class FrontPage extends Component{
         this.state= {
             threads: [],
             loading:true,
-            sortby:'Points',
+            sortby:'Likes',
             ascending:false
         }
         this.sortChange = this.sortChange.bind(this)
@@ -81,7 +81,7 @@ class FrontPage extends Component{
         if(this.state.sortby === 'Title'){
             temp.sort(compareTitle)
         }
-        if(this.state.sortby === 'Points'){
+        if(this.state.sortby === 'Likes'){
             temp.sort(compareKarma)
         }
         if(this.state.sortby === 'Date'){
@@ -98,17 +98,21 @@ class FrontPage extends Component{
                         <Card.Meta>
                             <span>submitted by {thread.author}</span><Moment fromNow>{thread.created}</Moment>
                         </Card.Meta>
+                        <br/>
+                        <Card.Content>
+                            {<Message className='messagebody'>{thread.body}</Message>}
+                        </Card.Content>
                     </Card.Content>
                     <Card.Content extra>
-                        {thread.karma} points
+                        {thread.karma} Likes
                     </Card.Content>
 
                 </Card>
             )
         })
         return(
-            <Segment loading={this.state.loading} style = {{background: "#ED4832"}}>
-                <Dropdown defaultValue={'Points'} selection options={sortOptions} onChange={this.sortChange}/>
+            <Segment loading={this.state.loading} style = {{"background": "#8a2be2"}}>
+                <Dropdown defaultValue={'Likes'} selection options={sortOptions} onChange={this.sortChange}/>
                 <Dropdown defaultValue={false} selection options={orderOptionss} onChange={this.orderChange}/>
                 {threadList}
             </Segment>

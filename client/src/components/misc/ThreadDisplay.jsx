@@ -90,7 +90,7 @@ class ThreadDisplay extends Component{
     }
     renderThread = () =>{
         return(
-            <div className='threadContainer' style ={{background: "#ED4832"}}> {/*053C5E */}
+            <div className='threadContainer' style ={{background: "#8a2be2"}}> {/*053C5E */}
                 <div className='leftDiv'>
                     <Button compact size='mini' positive={this.state.positive} onClick={this.upvote} icon>
                         <Icon name='arrow up'/>

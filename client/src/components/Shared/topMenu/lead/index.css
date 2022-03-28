@@ -1,15 +1,15 @@
-.top-menu-lead { 
-    padding: 10px;
-    background-color: #ed4832;
-    color: black;
-    display: absolute;
-    float: left;
+.top-menu-lead {
+  padding: 10px;
+  background-color: #8a2be2;
+  color: black;
+  display: absolute;
+  float: left;
 }
-@media screen and (max-width: 600px){
-    .top-menu-lead{
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        float: none;
-    }
+@media screen and (max-width: 600px) {
+  .top-menu-lead {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    float: none;
+  }
 }

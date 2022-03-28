@@ -1,5 +1,7 @@
 # LearnX - For Next Generation Learning
 
+![Screenshot](Snapshots/Login.jpg)
+
 - ### The goal is to provide a platform for community based learning where students do not face any barriers to learning and doubt solving.
 - ### LearnX allows creation of educational communities by teachers, mentors, educators and professionals. This is supplemented by live interactive sessions(online meets) weekly to facilitate better understanding.
 - ### LearnX also displays a list of upcoming meets, events related to that community.
@@ -34,5 +36,3 @@
     b. client
 3.  Run npm start in base folder to run server
 4.  Run npm start in client to run client
-
-![Screenshot](Snapshots/Login.jpg)

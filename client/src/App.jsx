@@ -11,6 +11,7 @@ import NavBar from './components/misc/Navigation';
 import NewThreadPage from './components/pages/NewThreadPage';
 import ThreadPage from './components/pages/ThreadPage';
 import HistoryPage from "./components/pages/HistoryPage";
+import ChoicePage from "./components/pages/ChoicePage.jsx";
 
 const ForumAndNavbar = () => {
         return(
@@ -46,6 +47,7 @@ const App =({location,isAuthenticated}) => (
                 <UserRoute location={location} path="/newthread" exact component={NewThreadPage}/>
                 <UserRoute location={location} path="/thread/:id" exact component={ThreadPage} />
                 <UserRoute location={location} path="/users/:username" exact component={HistoryPage} />
+                <UserRoute location={location} path="/choices" exact component={ChoicePage} />
             
         </div> 
 );

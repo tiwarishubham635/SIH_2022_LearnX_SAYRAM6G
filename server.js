@@ -30,12 +30,12 @@ app.use('/api/comments',comments);
 
 
 
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, "connection error:"));
-// db.once('open', () =>{
-//     console.log("Connected to database");
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, "connection error:"));
+db.once('open', () =>{
+    console.log("Connected to database");
 
-// });
+});
 
 if(process.env.NODE_ENV === "production")
 {

@@ -25,6 +25,10 @@ const ThreadSchema = new mongoose.Schema({
     downvoted:{
         type:[String],
         default:[]
+    },
+    community: {
+        type: String,
+        required: true   
     }
 },
     {timestamps:{createdAt:'created'}}

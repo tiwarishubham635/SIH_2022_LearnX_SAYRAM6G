@@ -16,6 +16,14 @@ const UserSchema = new mongoose.Schema({
     passwordHash:{
         type:String,
         required:true
+    },
+    role: {
+        type: String,
+        required: true,
+        default: "USER"
+    },
+    communities: {
+        type: [Number],
     }
 },
     {timestamps:true});

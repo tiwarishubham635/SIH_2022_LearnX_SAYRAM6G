@@ -30,7 +30,7 @@
 
 ## To run the repository on the system:
 
-1.  Clone the repository using "git clone https://github.com/tiwarishubham635/SIH_2022_LearnX.git"
+1.  Clone the repository using "git clone https://github.com/tiwarishubham635/SIH_2022_LearnX_SAYRAM6G.git"
 2.  Install node_modules via "npm install" in 2 folders repsectively.
     a. Base Folder
     b. client
